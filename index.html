@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ddsDental | Advanced Clinical Dentistry</title>
+    <style>
+        :root {
+            --clinic-navy: #1a2a3a;      /* Deep Professional Blue */
+            --clinic-accent: #b2945e;    /* Muted Clinical Gold */
+            --subtle-blue: #f0f4f8;      /* Soft Blue-Grey Background */
+            --text-dark: #2d3436;        /* Soft Charcoal Text */
+            --card-shadow: 0 15px 35px rgba(0,0,0,0.1);
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--subtle-blue); /* Removed the stark white */
+            color: var(--text-dark);
+        }
+
+        /* Top Call Bar */
+        .contact-bar {
+            background-color: var(--clinic-accent);
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+            font-size: 0.85rem;
+            font-weight: bold;
+            letter-spacing: 2px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .phone-link {
+            color: white;
+            text-decoration: none;
+        }
+
+        /* Main Header with Color */
+        header {
+            background-color: var(--clinic-navy);
+            padding: 60px 20px;
+            text-align: center;
+            color: white;
+            border-bottom: 5px solid var(--clinic-accent);
+        }
+
+        .logo-text {
+            font-size: 3rem;
+            font-weight: 700;
+            letter-spacing: -1px;
+            margin: 0;
+        }
+
+        .sub-logo {
+            font-size: 1rem;
+            color: var(--clinic-accent);
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            margin-top: 10px;
+        }
+
+        /* Philosophy Section - Dark Contrast */
+        .philosophy {
+            background-color: white;
+            padding: 80px 20px;
+            text-align: center;
+            border-bottom: 1px solid #dee2e6;
+        }
+
+        .philosophy h2 {
+            font-size: 2.2rem;
+            color: var(--clinic-navy);
+            margin-bottom: 25px;
+        }
+
+        .philosophy p {
+            max-width: 750px;
+            margin: 0 auto;
+            font-size: 1.15rem;
+            color: #555;
+            line-height: 1.8;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 80px 20px;
+        }
+
+        /* Gallery Sections */
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title h3 {
+            font-size: 2rem;
+            color: var(--clinic-navy);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            display: inline-block;
+            border-bottom: 3px solid var(--clinic-accent);
+            padding-bottom: 10px;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+            gap: 40px;
+        }
+
+        .case-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: var(--card-shadow);
+            transition: transform 0.3s ease;
+        }
+
+        .case-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .case-details {
+            padding: 25px;
+            background-color: white;
+        }
+
+        .case-label {
+            color: var(--clinic-accent);
+            font-size: 0.8rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        /* Technology Section with a Different Background Color */
+        .tech-section {
+            background-color: #e9ecef;
+            padding: 100px 20px;
+        }
+
+        .tech-showcase {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            max-width: 1200px;
+            margin: 40px auto 0;
+        }
+
+        .tech-card {
+            background: white;
+            padding: 10px;
+            border-radius: 4px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        .tech-card img {
+            width: 100%;
+            display: block;
+        }
+
+        /* CTA Section */
+        .cta-box {
+            background: linear-gradient(rgba(26, 42, 58, 0.9), rgba(26, 42, 58, 0.9)), 
+                        url('https://i.imgur.com/vHqY7R7.jpg'); /* Subtle image background overlay */
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 100px 20px;
+            text-align: center;
+        }
+
+        .btn {
+            background-color: var(--clinic-accent);
+            color: white;
+            padding: 20px 50px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            display: inline-block;
+            margin-top: 30px;
+            border-radius: 4px;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #967c4d;
+        }
+
+        footer {
+            background-color: var(--clinic-navy);
+            color: #bdc3c7;
+            text-align: center;
+            padding: 50px 20px;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .tech-showcase { grid-template-columns: 1fr; }
+            .logo-text { font-size: 2.2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="contact-bar">
+        CLINICAL RECEPTION: <a href="tel:09673804773" class="phone-link">0922 804 3887</a>
+    </div>
+
+    <header>
+        <h1 class="logo-text">ddsDental</h1>
+        <div class="sub-logo">Comprehensive Dentistry</div>
+    </header>
+
+    <section class="philosophy">
+        <h2>Expert-Led Treatment Planning</h2>
+        <p>At ddsDental, we emphasize clinical integrity and patient-centered results. Every case is personally planned to ensure the highest standards of function and aesthetics.</p>
+    </section>
+
+    <div class="container">
+        <div class="section-title">
+            <h3>Clinical Case Gallery</h3>
+        </div>
+
+        <div class="gallery-grid">
+            <div class="case-card">
+                <img src="bloom case 11.jpeg" alt="Orthodontic Correction">
+                <div class="case-details">
+                    <span class="case-label">Orthodontic Correction</span>
+                    <p>Precise arch development and alignment using advanced digital protocols.</p>
+                </div>
+            </div>
+            <div class="case-card">
+                <img src="bloom case 10.jpeg" alt="Space Management">
+                <div class="case-details">
+                    <span class="case-label">Complex Space Management</span>
+                    <p>Resolution of significant crowding and rotation through clinician-led planning.</p>
+                </div>
+            </div>
+            <div class="case-card">
+                <img src="dds ads 3.jpg" alt="Tissue Management">
+                <div class="case-details">
+                    <span class="case-label">Periodontal Integration</span>
+                    <p>Focusing on long-term gingival health throughout the tooth movement process.</p>
+                </div>
+            </div>
+            <div class="case-card">
+                <img src="dds ad 1.jpg" alt="Restorative Case">
+                <div class="case-details">
+                    <span class="case-label">Aesthetic Smile Restoration</span>
+                    <p>Restoring facial harmony and functional support with personalized care.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="tech-section">
+        <div class="section-title">
+            <h3>Advanced Clinical Technology</h3>
+        </div>
+        <div class="tech-showcase">
+            <div class="tech-card"><img src="5 why bloom.jpg" alt="Digital Planning"></div>
+            <div class="tech-card"><img src="7 why bloom.jpg" alt="Precision Workflow"></div>
+            <div class="tech-card"><img src="8 why bloom.jpg" alt="Material Excellence"></div>
+        </div>
+    </section>
+
+    <section class="cta-box">
+        <h2>Consult with our Clinical Lead</h2>
+        <p>Take the first step toward a predictable, expert-led transformation.</p>
+        <a href="tel:09673804773" class="btn">BOOK A CONSULTATION</a>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 ddsDental Philippines | Clinical Portfolio by Dr. Divino Dave Sison</p>
+    </footer>
+
+</body>
+</html>
